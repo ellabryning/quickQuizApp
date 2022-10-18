@@ -40,6 +40,11 @@ h3 {
     font-weight: 500;
 }
 
+p {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 /* UTILITIES */
 
 .container {
@@ -54,6 +59,10 @@ h3 {
 
 .container > * {
     width: 100%;
+}
+
+#game {
+    margin: 10%;
 }
 
 .flex-column {

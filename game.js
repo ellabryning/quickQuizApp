@@ -1,5 +1,8 @@
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
+const questionCounterText = document.getElementById('questionCounter');
+const scoreText = document.getElementById('score');
+
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -53,20 +56,22 @@ let questions = [
 const correctBonus = 10;
 const maxQuestions = 3;
 
-startGame = () => {
+function startGame () {
     questionCounter = 0;
     score = 0;
     Object.assign(availableQuestions, questions);
     getNewQuestion();
 };
 
-getNewQuestion = () => {
+function getNewQuestion () {
 
     if(availableQuestions.length == 0 || questionCounter >= maxQuestions) {
         return window.location.assign('/end.html');
     }
 
     questionCounter++;
+    questionCounterText.innerText = `${questionCounter}/${maxQuestions}`;
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -97,5 +102,9 @@ choices.forEach(choice => {
         }, 2000);
     });
 });
+
+function incrementScore () {
+
+}
 
 startGame();
