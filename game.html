@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Quiz - Play!</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="game.css">
 </head>
     <body>
-        
+        <div class="container">
+            <div id="game" class="justify-center flex-column">
+                <h2 id="question"> What is the answer to this question? </h2>
+                <div class="choice-container">
+                    <p class="choice-prefix">A</p>
+                    <p class="choice-text" data-number="1">Choice text</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-prefix">B</p>
+                    <p class="choice-text" data-number="2">Choice text</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-prefix">C</p>
+                    <p class="choice-text" data-number="3">Choice text</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-prefix">D</p>
+                    <p class="choice-text" data-number="4">Choice text</p>
+                </div>
+            </div>
+        </div>
+        <script src="game.js"></script>
     </body>
 </html>
