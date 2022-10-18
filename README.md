@@ -1,2 +1,0 @@
-# quickQuizApp
-# quickQuizApp
