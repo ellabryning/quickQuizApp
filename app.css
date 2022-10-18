@@ -113,3 +113,21 @@ p {
     box-shadow: none;
     transform: none;
 }
+
+/* FORMS */
+
+form {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+input {
+    width: 20rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}

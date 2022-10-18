@@ -1,0 +1,35 @@
+{
+  "name": "righto",
+  "version": "6.1.3",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test",
+    "coverage": "covert test",
+    "watchtest": "watchify -d test/index.js -o test/index.browser.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "abbott": "^1.1.3",
+    "setimmediate": "^1.0.5"
+  },
+  "devDependencies": {
+    "console-watch": "^1.0.2",
+    "covert": "^1.1.0",
+    "linklocal": "^2.5.2",
+    "tape": "^4.4.0",
+    "watchify": "^3.7.0"
+  },
+  "description": "Wana do some async stuff? Righto..",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoryNunn/righto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoryNunn/righto/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/righto#readme"
+}
