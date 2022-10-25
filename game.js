@@ -70,7 +70,7 @@ function getNewQuestion () {
   }
 
   questionCounter++;
-  progressText.innerText = `${questionCounter} / ${maxQuestions}`;
+  progressText.innerText = `Question ${questionCounter}/${maxQuestions}`;
   progressComplete.style.width = `${((questionCounter / maxQuestions) * 100) - 10}%`;
 
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
