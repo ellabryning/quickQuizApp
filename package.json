@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "semistandard --fix",
     "test": "tape test ./test/index.js index.js ",
     "build": "browserify -d ./test/index.js > ./test/index.browser.js",
     "watch": "watchify -d ./test/index.js -o ./test/index.browser.js"
@@ -20,6 +21,7 @@
     "c8": "^7.12.0",
     "fs": "^0.0.1-security",
     "jsdom": "^20.0.1",
+    "semistandard": "^16.0.1",
     "tape": "^5.2.2",
     "watchify": "^4.0.0"
   }
