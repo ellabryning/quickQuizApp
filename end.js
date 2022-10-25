@@ -1,7 +1,7 @@
 const username = document.getElementById('username');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
-const finalScore = getElementById('finalScore');
+const finalScore = document.getElementById('finalScore');
 
 finalScore.innerText = mostRecentScore;
 

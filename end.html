@@ -7,22 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>End Game</title>
-    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
     <div class="container flex-column flex-center">
-        <div id="end">
+        <div id="end" class="flex-column flex-center">
             <h1 id="finalScore"></h1>
         </div>
         <form>
-            <input type="text" name="username" id="username" placeholder="username" />
-            <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
+            <input 
+                type="text" 
+                name="username" 
+                id="username" 
+                placeholder="username" 
+            />
+            <button 
+                type="submit" 
+                class="btn" 
+                id="saveScoreBtn" 
+                onclick="saveHighScore(event)" 
+                disabled
+            >Save</button>
         </form>
         <a href="./game.html" class="btn">Play Again</a>
         <a href="/" class="btn">Go Home</a>
     </div>
 </body>
-<script src="./game.js"></script>
 <script src="./end.js"></script>
 </html>
