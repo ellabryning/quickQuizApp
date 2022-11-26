@@ -10,48 +10,16 @@ let score = 0;
 let questionCounter = 0;
 const availableQuestions = [];
 
-const questions = [
-  {
-    question: 'question1',
-    choice1: '1',
-    choice2: '2',
-    choice3: '3',
-    choice4: '4',
-    answer: 1
-  },
-  {
-    question: 'question2',
-    choice1: '1',
-    choice2: '2',
-    choice3: '3',
-    choice4: '4',
-    answer: 2
-  },
-  {
-    question: 'question3',
-    choice1: '1',
-    choice2: '2',
-    choice3: '3',
-    choice4: '4',
-    answer: 3
-  },
-  {
-    question: 'question4',
-    choice1: '1',
-    choice2: '2',
-    choice3: '3',
-    choice4: '4',
-    answer: 4
-  },
-  {
-    question: 'question5',
-    choice1: '1',
-    choice2: '2',
-    choice3: '3',
-    choice4: '4',
-    answer: 4
-  }
-];
+const questions = [];
+
+fetch('questions.json').then(res => {
+  console.log(res);
+  return res.json();
+}).then(loadedQuestions => {
+  console.log(loadedQuestions);
+  questions = loadedQuestions;
+  startGame();
+});
 
 const correctBonus = 10;
 const maxQuestions = 3;
@@ -61,7 +29,7 @@ function startGame () {
   score = 0;
   Object.assign(availableQuestions, questions);
   getNewQuestion();
-}
+};
 
 function getNewQuestion () {
   if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
@@ -84,7 +52,7 @@ function getNewQuestion () {
 
   availableQuestions.splice(questionIndex, 1);
   acceptingAnswers = true;
-}
+};
 
 choices.forEach(choice => {
   choice.addEventListener('click', e => {
@@ -111,6 +79,4 @@ choices.forEach(choice => {
 function incrementScore (num) {
   score += num;
   scoreText.innerText = score;
-}
-
-startGame();
+};
